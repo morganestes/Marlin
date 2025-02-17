@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2021 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -21,20 +21,16 @@
  */
 #pragma once
 
-#define BOARD_INFO_NAME "Chitu3D V9"
+/**
+ * Creality 4.2.x (STM32F103RE / STM32F103RC) board pin assignments
+ * with hotend thermistor plugged into Z-axis
+ */
 
-#define Z_STOP_PIN                          PA14
+#define BOARD_INFO_NAME      "Creality v4.2.2"
+#define DEFAULT_MACHINE_NAME "Ender-3"
 
-#define Z2_ENABLE_PIN                       PF3
-#define Z2_STEP_PIN                         PF5
-#define Z2_DIR_PIN                          PF1
-#define Z2_STOP_PIN                         PA13
+// Handle the broken TH1 pin
+#define Z_STOP_PIN -1 // DISABLE
+#define TEMP_0_PIN  PA7 // Use the former Z stop pin
 
-#ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                   PG9
-#endif
-#ifndef FIL_RUNOUT2_PIN
-  #define FIL_RUNOUT2_PIN                   PF13
-#endif
-
-#include "pins_CHITU3D_common.h"
+#include "Marlin\src\pins\stm32f1\pins_CREALITY_V4.h"

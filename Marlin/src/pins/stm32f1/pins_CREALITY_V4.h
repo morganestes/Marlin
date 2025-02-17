@@ -91,7 +91,6 @@
 #ifndef Z_STOP_PIN
   #define Z_STOP_PIN                        PA7
 #endif
-
 #ifndef Z_MIN_PROBE_PIN
   #define Z_MIN_PROBE_PIN                   PB1   // BLTouch IN
 #endif
@@ -148,7 +147,9 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                          PC5   // TH1
+#ifndef TEMP_0_PIN
+  #define TEMP_0_PIN                          PC5   // TH1
+#endif
 #define TEMP_BED_PIN                        PC4   // TB1
 
 //

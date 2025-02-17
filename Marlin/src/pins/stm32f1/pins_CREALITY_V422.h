@@ -26,8 +26,13 @@
  */
 
 #define BOARD_INFO_NAME      "Creality v4.2.2"
-#define DEFAULT_MACHINE_NAME "Creality3D"
+#define DEFAULT_MACHINE_NAME "Ender-3"
 
-#define EMIT_CREALITY_422_WARNING
+// Handle the broken TH1 pin
+// #define Z_STOP_PIN  PB0 // set to BLTouch pin
+#define Z_STOP_PIN -1 // DISABLE
+#define TEMP_0_PIN  PA7 // Use the former Z stop pin
+
+// #define EMIT_CREALITY_422_WARNING
 
 #include "pins_CREALITY_V4.h"
