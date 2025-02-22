@@ -41,7 +41,7 @@
  * here we define this default string as the date where the latest release
  * version was tagged.
  */
-//#define STRING_DISTRIBUTION_DATE "2025-02-04"
+#define STRING_DISTRIBUTION_DATE "2025-02-21"
 
 /**
  * The protocol for communication to the host. Protocol indicates communication
@@ -61,7 +61,7 @@
  * has a distinct Github fork— the Source Code URL should just be the main
  * Marlin repository.
  */
-#define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
+#define SOURCE_CODE_URL "github.com/morganestes/Marlin"
 
 /**
  * Default generic printer UUID.
@@ -73,11 +73,3 @@
  * documentation about a specific Marlin release.
  */
 #define WEBSITE_URL "marlinfw.org"
-
-/**
- * Set the vendor info the serial USB interface, if changeable.
- * Currently only supported by DUE platform.
- */
-//#define USB_DEVICE_VENDOR_ID           0x0000
-//#define USB_DEVICE_PRODUCT_ID          0x0000
-//#define USB_DEVICE_MANUFACTURE_NAME    WEBSITE_URL
